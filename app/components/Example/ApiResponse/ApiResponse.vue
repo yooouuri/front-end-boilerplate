@@ -18,7 +18,7 @@ const response = computed(() => {
 </script>
 
 <template>
-  <pre class="bg-stone-400 text-stone-900 rounded-sm max-h-60 overflow-auto">
+  <pre class="bg-stone-400 text-stone-900 rounded-sm max-h-60 overflow-auto text-xs">
     {{ response }}
   </pre>
 </template>
