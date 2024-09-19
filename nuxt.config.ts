@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     'nuxt-api-party',
+    '@nuxt/content',
   ],
 
   experimental: {
