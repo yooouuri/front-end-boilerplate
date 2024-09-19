@@ -14,6 +14,10 @@ Each overview must be accessible via its respective page. Upon selecting an item
 
 ---
 
+## Deliverable
+
+Please fork this repository and submit your solution as your own repository. Once you're done, share the link with us. We will review your code and provide feedback.
+
 ## Requirements
 
 ### 1. Overviews
