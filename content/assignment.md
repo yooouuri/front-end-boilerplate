@@ -104,3 +104,23 @@ If using TypeScript:
 - The package manager is defined in package.json as pnpm. If you prefer to use bun, npm or yarn, you can change it, but please make sure to remove the pnpm lock file and commit the new one.
 
 ---
+
+## Getting started
+
+### 1. Clone to local
+
+```bash
+npx degit spend-cloud-tom/front-end-boilerplate proactive-technical-assessment-my-name
+cd proactive-technical-assessment-my-name
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
+
+### 2. Run the project
+
+```bash
+pnpm dev
+```
+
+### 3. Deploy on Netlify
+
+You can choose to deploy your project on Netlify. The project is already set up for deployment on Netlify. You can follow the instructions in the [Netlify documentation](https://docs.netlify.com/site-deploys/create-deploys/) to deploy your project. If you do, you can set the website address in the settings of your repository.
