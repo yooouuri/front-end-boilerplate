@@ -5,6 +5,8 @@ description: Instructions for the Rick & Morty and Pokémon Overview Application
 
 # Assignment: Rick & Morty and Pokémon Overview Application
 
+Please read this assignment very well!
+
 ## Objective
 
 Create a Nuxt application that showcases two distinct overviews:
@@ -33,12 +35,12 @@ Please fork this repository and submit your solution as your own repository. Onc
 
 ### 2. Detail Pages
 
-- **Unique Detail Pages**: Each character or Pokémon should have a dedicated detail page that is navigable from the overview.
+- **Unique Detail Pages**: Each character or Pokémon should have a dedicated detail page that is navigable from the overview. Because the overviews should look the same, and only the content differs, you should think about how to structure your components to achieve this. Ask yourself: "What is the same, and what is different?", and also "How can I make this scalable?". In the future, we might want to add more overviews, so we should be able to do so without much hassle.
+- **View Modes**: Implement a grid or list view toggle option for the overviews.
 - **Consistent Layout**: The layout of Rick & Morty character detail pages should be structurally identical to Pokémon detail pages, focusing only on presenting the appropriate content.
 
 ### Bonus Points
 
-- **View Modes**: Implement a grid or list view toggle option for the overviews.
 - **Unit Testing**: Implement one or more unit tests to ensure correct functionality and reusability of your components.
 
 ---
@@ -59,8 +61,10 @@ Please fork this repository and submit your solution as your own repository. Onc
 
    - Keep components focused and separated. Avoid putting too much logic or UI in one place when it can be modularized.
 
-4. **Two-Way Data Binding**
+4. **Two-Way Data Binding** (only when applicable to your solution)
+
    - If you need to share states between different components, use `v-model` or similar mechanisms for reactive state binding between parent and child components. Make sure to handle the data flow correctly, and avoid anti-patterns.
+
 5. **Project structure**
    - Ensure your project structure is clean and organized. Use folders and files to separate concerns and keep your codebase maintainable.
 
@@ -68,7 +72,7 @@ Please fork this repository and submit your solution as your own repository. Onc
 
 ## Technical Requirements
 
-- **State Management**: Use Pinia for state management. It is already installed. Refer to [Pinia documentation](https://pinia.vuejs.org/) for usage.
+- **State Management**: If you feel you need to use a global state, which is a possibility, you can do this in many ways. If you want to go for Pinia, know that it is already installed. Refer to [Pinia documentation](https://pinia.vuejs.org/) for usage. Another possibility could be to use the provideInjectionState hook offered by vueUse. One of the areas where having a state would be beneficial is to keep track of which overview has which view mode (grid or list).
 
 - **API Integration**: Data fetching should be handled via the API Party composables. Read [API Party documentation](https://example.com/api-party) for guidelines on how to use it effectively. The current landing page already has a sample implementation.
 
@@ -95,8 +99,8 @@ If using TypeScript:
 - The repository is called **"boilerplate"** for a reason. We'd like to see how you would **add your design sauce** to the mix. Feel free to incorporate your own unique styling, animations, or other creative elements that align with best practices.
 - Ensure consistency and good UX practices, but bring your own flavor into the design.
 - Always look for existing modules before installing packages.
-- The above pointers and best practices are **non-negotiable**.
 - Commit early, commit often. We'd like to see your progress as you work through the assignment. This also helps us understand your thought process.
 - **Have fun!** We're excited to see what you come up with. If you have any questions, feel free to reach out to us.
+- The package manager is defined in package.json as pnpm. If you prefer to use bun, npm or yarn, you can change it, but please make sure to remove the pnpm lock file and commit the new one.
 
 ---
