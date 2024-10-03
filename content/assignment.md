@@ -96,12 +96,9 @@ If using TypeScript:
 
 ## Additional Guidelines
 
-- The repository is called **"boilerplate"** for a reason. We'd like to see how you would **add your design sauce** to the mix. Feel free to incorporate your own unique styling, animations, or other creative elements that align with best practices.
-- Ensure consistency and good UX practices, but bring your own flavor into the design.
-- Always look for existing modules before installing packages.
-- Commit early, commit often. We'd like to see your progress as you work through the assignment. This also helps us understand your thought process.
 - **Have fun!** We're excited to see what you come up with. If you have any questions, feel free to reach out to us.
 - The package manager is defined in package.json as pnpm. If you prefer to use bun, npm or yarn, you can change it, but please make sure to remove the pnpm lock file and commit the new one.
+- **Commits**: If possible, please commit more often than once.
 
 ---
 
@@ -124,3 +121,4 @@ pnpm dev
 ### 3. Deploy on Netlify
 
 You can choose to deploy your project on Netlify. The project is already set up for deployment on Netlify. You can follow the instructions in the [Netlify documentation](https://docs.netlify.com/site-deploys/create-deploys/) to deploy your project. If you do, you can set the website address in the settings of your repository.
+ploy your project. If you do, you can set the website address in the settings of your repository.
