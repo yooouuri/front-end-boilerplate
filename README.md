@@ -114,7 +114,3 @@ pnpm i # If pnpm isn’t installed, run: npm install -g pnpm
 ```bash
 pnpm dev
 ```
-
-### 3. Optional: Deploy on Netlify
-
-If you choose to deploy on Netlify, follow the setup instructions in the documentation.
