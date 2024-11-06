@@ -19,6 +19,13 @@ Each overview must be accessible via a separate page. Selecting an item from an 
 - [Rick and Morty API](https://rickandmortyapi.com/documentation).
 - [Pokémon API](https://pokeapi.co/docs/v2).
 
+## Wireframes
+
+You are free to design the application as you see fit, but you can use the following wireframes as a reference:
+
+::content-wireframes
+::
+
 ---
 
 ## Deliverable
@@ -117,5 +124,5 @@ pnpm i # If pnpm isn’t installed, run: npm install -g pnpm
 ### 2. Run the Project
 
 ```bash
-pnpm dev
+pnpm run dev
 ```
