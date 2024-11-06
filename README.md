@@ -18,7 +18,7 @@ Each overview must be accessible via a separate page. Selecting an item from an 
 
 You are free to design the application as you see fit, but you can use the following wireframes as a reference:
 
-[![Wireframes](./public/content/wireframes.png)](./public/content/wireframes.png)
+[![Wireframes](./public/images/wireframes.svg)](./public/images/wireframes.svg)
 
 ---
 
