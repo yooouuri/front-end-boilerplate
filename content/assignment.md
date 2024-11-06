@@ -100,6 +100,7 @@ If you choose to use TypeScript:
 - **Commit Regularly**: Make frequent commits for better version control.
 - **Package Manager**: The project specifies `pnpm` in `package.json`. If you prefer another package manager, you can change it, but please delete the `pnpm` lock file and commit the new one.
 - **Netlify Deployment**: You can deploy your project on Netlify, which is pre-configured. Follow the [Netlify documentation](https://docs.netlify.com/site-deploys/create-deploys/) for deployment instructions. If you deploy, set the website address in your repository settings.
+- **Linter rules**: We'd prefer you sticking to existing linter rules. These are the rules we use in our projects. If you want to change them, please let us know why.
 
 ---
 
