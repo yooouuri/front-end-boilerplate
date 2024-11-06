@@ -5,43 +5,44 @@ description: Instructions for the Rick & Morty and Pokémon Overview Application
 
 # Assignment: Rick & Morty and Pokémon Overview Application
 
-Please read this assignment very well!
+Please read these instructions carefully.
 
 ## Objective
 
-Create a Nuxt application that showcases two distinct overviews:
+Create a Nuxt application to showcase two distinct content overviews:
 
 1. **Rick and Morty characters**
 2. **Pokémon**
 
-Each overview must be accessible via its respective page. Upon selecting an item from an overview, users will be redirected to a detail page. The look, feel, and navigation across the overviews and detail pages must be consistent. The only difference should be the data displayed depending on the content (Rick & Morty characters or Pokémon). Both APIs are already integrated into the project. If you want to add a third one, you can do so. You can look up the specs of both APIs.
+Each overview must be accessible via a separate page. Selecting an item from an overview should navigate users to a detailed page for that item. The user experience (UX) across overviews and detail pages should be consistent, with only the data changing based on the selected item (Rick & Morty character or Pokémon). Both APIs are integrated in the project, but you may add a third if desired. Refer to the API documentation:
 
-- [rickandmortyapi.com](https://rickandmortyapi.com/documentation)
-- [pokeapi.co](https://pokeapi.co/docs/v2).
+- [Rick and Morty API](https://rickandmortyapi.com/documentation).
+- [Pokémon API](https://pokeapi.co/docs/v2).
 
 ---
 
 ## Deliverable
 
-Please fork this repository and submit your solution as your own repository. Once you're done, share the link with us. We will review your code and provide feedback.
+Fork this repository and submit your solution as a new repository. Once complete, share the link for review. We’ll provide feedback on your code.
 
 ## Requirements
 
 ### 1. Overviews
 
-- **Separate Pages**: Both Rick & Morty and Pokémon overviews must be displayed on individual pages.
-- **Consistency**: Overviews and detail pages should have consistent UI/UX, differing only by the data presented.
-- **Navigation**: Clicking an item in the overview should navigate the user to a detail page with specific information about the selected character or Pokémon.
+- **Separate Pages**: Each overview (Rick & Morty and Pokémon) should be on its own page.
+- **Consistent UI/UX**: The overview and detail pages should maintain a unified design, with the only difference being the displayed data.
+- **Navigation**: Clicking an item in the overview should navigate to a detail page with specific information about the selected character or Pokémon.
 
 ### 2. Detail Pages
 
-- **Unique Detail Pages**: Each character or Pokémon should have a dedicated detail page that is navigable from the overview. Because the overviews should look the same, and only the content differs, you should think about how to structure your components to achieve this. Ask yourself: "What is the same, and what is different?", and also "How can I make this scalable?". In the future, we might want to add more overviews, so we should be able to do so without much hassle.
-- **View Modes**: Implement a grid or list view toggle option for the overviews.
-- **Consistent Layout**: The layout of Rick & Morty character detail pages should be structurally identical to Pokémon detail pages, focusing only on presenting the appropriate content.
+- **Dedicated Detail Pages**: Each character or Pokémon should have its own detail page, navigable from the overview.
+- **Component Structure**: Design components with scalability in mind to facilitate adding more overviews in the future without significant rework.
+- **View Modes**: Implement grid and list view options for the overviews.
+- **Consistent Layout**: The layout for Rick & Morty and Pokémon detail pages should be identical in structure, displaying only the relevant content.
 
 ### Bonus Points
 
-- **Unit Testing**: Implement one or more unit tests to ensure correct functionality and reusability of your components.
+- **Unit Testing**: Add one or more unit tests to ensure component functionality and reusability.
 
 ---
 
@@ -49,76 +50,75 @@ Please fork this repository and submit your solution as your own repository. Onc
 
 1. **Reusability**
 
-   - Your code should be scalable and reusable across multiple scenarios.
-   - Avoid hard-coding or tightly coupling logic to specific scenarios.
+   - Code should be scalable and reusable, with no hard-coding or tight coupling for specific scenarios.
 
 2. **Composition Over Inheritance**
 
-   - Avoid using conditionals (e.g., `if/else`) to handle different UI presentations in a single component.
-   - Ensure each component has a **single responsibility**, and create separate components for distinct tasks.
+   - Avoid using `if/else` statements for conditional CSS classes; instead, make components as modular and single-purpose as possible. However, it's perfectly acceptable to use `if/else` logic to render different components based on the application state.
 
 3. **Single Responsibility Components**
 
-   - Keep components focused and separated. Avoid putting too much logic or UI in one place when it can be modularized.
+   - Keep components focused on a single function, avoiding excessive logic or UI in one place when it can be split into smaller modules.
 
-4. **Two-Way Data Binding** (only when applicable to your solution)
+4. **Two-Way Data Binding** (when applicable)
 
-   - If you need to share states between different components, use `v-model` or similar mechanisms for reactive state binding between parent and child components. Make sure to handle the data flow correctly, and avoid anti-patterns.
+   - If state sharing between components is needed, use `v-model` or similar for reactive state management between parent and child components, ensuring proper data flow and avoiding anti-patterns.
 
-5. **Project structure**
-   - Ensure your project structure is clean and organized. Use folders and files to separate concerns and keep your codebase maintainable.
+5. **Project Structure**
+
+   - Organize the project structure clearly, using folders and files to separate concerns and maintain a clean codebase.
 
 ---
 
 ## Technical Requirements
 
-- **State Management**: If you feel you need to use a global state, which is a possibility, you can do this in many ways. If you want to go for Pinia, know that it is already installed. Refer to [Pinia documentation](https://pinia.vuejs.org/) for usage. Another possibility could be to use the provideInjectionState hook offered by vueUse. One of the areas where having a state would be beneficial is to keep track of which overview has which view mode (grid or list).
+- **State Management**: Use a global state if needed. Pinia is already installed; refer to the [Pinia documentation](https://pinia.vuejs.org/) for guidance. You can also consider using `provide` and `inject` with VueUse if appropriate. Managing the view mode (grid or list) for each overview could be a good use of state.
 
-- **API Integration**: Data fetching should be handled via the API Party composables. Read [API Party documentation](https://example.com/api-party) for guidelines on how to use it effectively. The current landing page already has a sample implementation.
+- **API Integration**: Handle data fetching through the API Party composables. Refer to the [API Party documentation](https://example.com/api-party) for guidance. The current landing page includes an example.
 
-- **UI Components**: Leverage components from [Nuxt UI](https://ui.nuxt.com/) to ensure a cohesive look and feel. Tailwind CSS is pre-configured for styling, and you can adjust its settings as needed.
+- **UI Components**: Use components from [Nuxt UI](https://ui.nuxt.com/) to maintain design consistency. Tailwind CSS is pre-configured and can be customized as needed.
 
-## Extra pointers
+## Additional Resources
 
-- **VueUse Functions**: VueUse composables are auto-imported. You can use them as needed by referring to the [VueUse documentation](https://vueuse.org/).
+- **VueUse Functions**: VueUse composables are auto-imported. Use them as needed—check the [VueUse documentation](https://vueuse.org/) for more information.
 
-- **Nuxt & Vue**: This project uses [Nuxt](https://nuxt.com/) built on top of [Vue.js](https://vuejs.org/). Ensure all components, pages, and logic are in line with Nuxt and Vue.js best practices.
+- **Nuxt & Vue**: Ensure that your components, pages, and logic align with Nuxt and Vue.js best practices.
 
 ---
 
 ## TypeScript
 
-If using TypeScript:
+If you choose to use TypeScript:
 
-- **Mindful Usage**: Ensure your TypeScript usage is scalable, reusable, and aligns with modern best practices.
-
----
-
-## Additional Guidelines
-
-- **Have fun!** We're excited to see what you come up with. If you have any questions, feel free to reach out to us.
-- The package manager is defined in package.json as pnpm. If you prefer to use bun, npm or yarn, you can change it, but please make sure to remove the pnpm lock file and commit the new one.
-- **Commits**: If possible, please commit more often than once.
+- **Scalable Usage**: Ensure that your TypeScript implementation is scalable, reusable, and follows best practices.
 
 ---
 
-## Getting started
+## Final Guidelines
 
-### 1. Clone to local
+- **Enjoy the Project!** We’re excited to see your approach to the challenge. Reach out with any questions.
+- **Commit Regularly**: Make frequent commits for better version control.
+- **Package Manager**: The project specifies `pnpm` in `package.json`. If you prefer another package manager, you can change it, but please delete the `pnpm` lock file and commit the new one.
+- **Netlify Deployment**: You can deploy your project on Netlify, which is pre-configured. Follow the [Netlify documentation](https://docs.netlify.com/site-deploys/create-deploys/) for deployment instructions. If you deploy, set the website address in your repository settings.
+
+---
+
+## Getting Started
+
+### 1. Clone to Local Machine
 
 ```bash
 npx degit spend-cloud-tom/front-end-boilerplate proactive-technical-assessment-my-name
 cd proactive-technical-assessment-my-name
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+pnpm i # If pnpm isn’t installed, run: npm install -g pnpm
 ```
 
-### 2. Run the project
+### 2. Run the Project
 
 ```bash
 pnpm dev
 ```
 
-### 3. Deploy on Netlify
+### 3. Optional: Deploy on Netlify
 
-You can choose to deploy your project on Netlify. The project is already set up for deployment on Netlify. You can follow the instructions in the [Netlify documentation](https://docs.netlify.com/site-deploys/create-deploys/) to deploy your project. If you do, you can set the website address in the settings of your repository.
-ploy your project. If you do, you can set the website address in the settings of your repository.
+If you choose to deploy on Netlify, follow the setup instructions in the documentation.
